@@ -1,8 +1,10 @@
-# The Vacuum Distillation Channel
+# The Vacuum Distillation Channel — voting board
 
-> 24/7 vacuum distillation livestream — simultaneously live on YouTube, Twitch, and Kick. Runs off a single iPad on a charger, pointed at the rig.
+> 24/7 vacuum distillation livestream from the **KOSL** (Kropp Olsha Science Lab) bench — simultaneously live on YouTube, Twitch, and Kick. Runs off a single iPad on a charger, pointed at the bench.
 
-**Website:** https://toyuvalo.github.io/vacuumdistill  
+**Live page:** https://kosl.dvlce.ca/vacuumdistill *(canonical home — built into the KOSL site)*  
+**This repo** now serves as the **public voting board**: the live page reads 👍 reaction counts from the Issues here. The old GitHub Pages URL redirects to the KOSL page.
+
 **YouTube:** *(add after setup)*  
 **Twitch:** *(add after setup)*  
 **Kick:** *(add after setup)*
