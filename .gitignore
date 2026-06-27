@@ -13,6 +13,9 @@ venv/
 # OBS profiles (contain machine-specific paths)
 obs/profiles/
 
+# Stream keys — NEVER commit this
+stream-config.json
+
 # OS
 .DS_Store
 Thumbs.db

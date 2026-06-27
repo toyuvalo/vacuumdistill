@@ -1,59 +1,51 @@
 # The Vacuum Distillation Channel
 
-> 24/7 livestream of vacuum distillation experiments — live on YouTube, Twitch, and Kick.
+> 24/7 vacuum distillation livestream — simultaneously live on YouTube, Twitch, and Kick. Runs off a single iPad on a charger, pointed at the rig.
 
 **Website:** https://toyuvalo.github.io/vacuumdistill  
-**YouTube:** *(add link after channel creation)*  
-**Twitch:** *(add link)*  
-**Kick:** *(add link)*
+**YouTube:** *(add after setup)*  
+**Twitch:** *(add after setup)*  
+**Kick:** *(add after setup)*
 
 ---
 
-## What this is
+## Setup (iPad, ~15 minutes total)
 
-A single fixed camera pointed at a vacuum distillation rig, streaming continuously. During setup changes, a pre-recorded loop plays. Viewers vote on what gets distilled next via GitHub Issues.
+See **[ipad/SETUP.md](ipad/SETUP.md)** for the full step-by-step guide.
+
+**TL;DR:**
+1. Create [Restream.io](https://restream.io) account → connect YouTube, Twitch, Kick → copy RTMP URL + key
+2. Install **Larix Broadcaster** on iPad (free, App Store)
+3. In Larix → Connections → New → paste Restream RTMP URL + key
+4. iPad Settings → Display & Brightness → Auto-Lock → **Never**
+5. Plug in charger, prop up iPad pointed at the rig, tap **Broadcast**
+
+That's it. You're live on all three platforms at once.
+
+---
+
+## Switching setups / going offline
+
+- Point the iPad at a "BRB" card or leave it on the idle rig during changeovers
+- Tap **Stop** in Larix when fully offline; Restream will show your channel as offline
+
+For automated looping videos during changeovers, see `ipad/SETUP.md` → Restream Scheduler (paid feature, optional).
+
+---
+
+## Voting (what to distill next)
+
+The [website](https://toyuvalo.github.io/vacuumdistill) shows a live poll. Viewers vote by 👍 reacting to GitHub Issues [#1–#4](https://github.com/toyuvalo/vacuumdistill/issues). 
+
+To rotate the poll: open new Issues, edit `docs/poll.json`, push.
 
 ## Repository structure
 
 ```
 vacuumdistill/
-├── docs/               # GitHub Pages site (live at toyuvalo.github.io/vacuumdistill)
-│   ├── index.html      # Landing page with stream embed + polls + platform links
-│   ├── style.css
-│   ├── app.js
-│   └── poll.json       # Active poll — edit this to update the current vote
-├── obs/
-│   ├── README.md       # Full streaming setup guide (OBS + multi-RTMP)
-│   ├── scenes/
-│   │   └── vacuum-distill-scenes.json   # OBS scene collection template
-│   └── scripts/
-│       ├── loop-manager.py   # Auto-switches to loop when camera loses signal
-│       └── requirements.txt
-├── loops/              # Drop looping video files here (gitignored — too large)
-│   └── README.md
-└── .github/
-    └── workflows/
-        └── pages.yml   # Deploys docs/ to GitHub Pages
+├── docs/            # GitHub Pages site
+├── ipad/            # iPad streaming setup guide + config
+├── obs/             # Optional: Windows OBS setup (if you ever want a PC streamer)
+├── loops/           # Loop video files (gitignored)
+└── stream-config.json  # Your stream keys (gitignored — never committed)
 ```
-
-## Quick start
-
-1. **Streaming PC:** Install [OBS Studio](https://obsproject.com/) and the [obs-multi-rtmp plugin](https://github.com/sorayuki/obs-multi-rtmp)
-2. **Scenes:** Import `obs/scenes/vacuum-distill-scenes.json` into OBS
-3. **Stream keys:** Add your YouTube / Twitch / Kick keys to the Multi-RTMP panel
-4. **Loop videos:** Drop `.mp4` files into the `loops/` folder on the streaming PC and point the OBS Loop scene's VLC source at it
-5. **Auto-switcher:** `pip install -r obs/scripts/requirements.txt && python obs/scripts/loop-manager.py`
-6. **Voting:** Edit `docs/poll.json` to update the current poll, open GitHub Issues for each option (see `docs/app.js` for the issue-number mapping)
-
-See `obs/README.md` for the full streaming setup guide.
-
-## How voting works
-
-- `docs/poll.json` defines the current poll question and maps each option to a GitHub Issue number
-- The site fetches 👍 reaction counts from those Issues via the GitHub REST API (no auth needed for public repos)
-- Clicking "Vote" opens the Issue so the viewer can add a 👍
-- Update `poll.json` to rotate polls; close old Issues and open new ones
-
-## Updating "Now Distilling"
-
-Edit `docs/poll.json` → `now_distilling` field and push. The site reads it directly from the repo via the GitHub raw CDN.
