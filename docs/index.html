@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vacuum Distillation Channel</title>
+  <meta name="description" content="24/7 live vacuum distillation experiments. Watch live on YouTube, Twitch, and Kick. Vote on what we distill next.">
+  <meta property="og:title"       content="The Vacuum Distillation Channel">
+  <meta property="og:description" content="24/7 live vacuum distillation experiments.">
+  <meta property="og:type"        content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────── -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">⚗️</div>
+      The Vacuum Distillation Channel
+    </div>
+    <div id="live-badge">
+      <span class="live-badge"><span class="live-dot"></span>LIVE</span>
+    </div>
+  </div>
+</header>
+
+<!-- ── Stream ─────────────────────────────────────────────── -->
+<div class="stream-section">
+  <div class="container">
+    <div class="stream-wrapper" id="stream-wrap">
+      <div class="stream-placeholder">
+        <div class="icon">⚗️</div>
+        <p>Loading stream…</p>
+      </div>
+    </div>
+
+    <!-- Now distilling + platform links -->
+    <div class="info-row">
+      <div class="now-distilling">
+        <span class="now-label">Now Distilling</span>
+        <span class="now-name" id="now-name">—</span>
+        <span class="now-meta" id="now-meta"></span>
+      </div>
+
+      <div class="platform-links">
+        <!-- YouTube -->
+        <a class="platform-btn youtube" href="#" id="yt-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          YouTube
+        </a>
+
+        <!-- Twitch -->
+        <a class="platform-btn twitch" href="#" id="twitch-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/>
+          </svg>
+          Twitch
+        </a>
+
+        <!-- Kick -->
+        <a class="platform-btn kick" href="#" id="kick-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2h4v20H2zm6 6h4v4h-4zm0 6h4v4h-4zm6-6h4v4h-4zm0 6h4v4h-4z"/>
+          </svg>
+          Kick
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Main content ────────────────────────────────────────── -->
+<main>
+  <div class="container">
+    <div class="main-grid">
+
+      <!-- Poll -->
+      <div class="card" id="poll-container">
+        <div class="card-title">Community Vote</div>
+        <div class="poll-question" id="poll-question">What should we distill next?</div>
+        <p class="poll-loading" id="poll-loading" style="color:var(--muted);font-size:13px;font-family:monospace">Loading votes…</p>
+        <div class="poll-options" id="poll-options"></div>
+        <br>
+        <a class="vote-btn" id="vote-btn"
+           href="https://github.com/toyuvalo/vacuumdistill/issues"
+           target="_blank" rel="noopener">
+          👍 Vote on GitHub
+        </a>
+        <p class="poll-closes" id="poll-closes"></p>
+      </div>
+
+      <!-- Sidebar -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+
+        <!-- Past distillations -->
+        <div class="card">
+          <div class="card-title">Past Distillations</div>
+          <div class="past-list" id="past-list">
+            <p style="color:var(--muted);font-size:13px">Loading…</p>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="card about-card">
+          <div class="card-title">About</div>
+          <p>A <strong>24/7 livestream</strong> of a vacuum distillation rig — essential oils, solvents, terpenes, and whatever the community votes for next.</p>
+          <p>During setup changes the stream loops pre-recorded footage. Everything is real — real glassware, real vacuum, real chemistry.</p>
+          <p>
+            <a href="https://github.com/toyuvalo/vacuumdistill" target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    The Vacuum Distillation Channel ·
+    <a href="https://github.com/toyuvalo/vacuumdistill" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

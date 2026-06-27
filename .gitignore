@@ -1,0 +1,18 @@
+# Loop videos (too large for git)
+loops/*.mp4
+loops/*.mkv
+loops/*.mov
+loops/*.avi
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OBS profiles (contain machine-specific paths)
+obs/profiles/
+
+# OS
+.DS_Store
+Thumbs.db

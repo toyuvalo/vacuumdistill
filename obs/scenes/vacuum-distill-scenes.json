@@ -1,0 +1,222 @@
+{
+  "AuxAudioDevice1": { "name": "Disabled", "monitored": false },
+  "AuxAudioDevice2": { "name": "Disabled", "monitored": false },
+  "AuxAudioDevice3": { "name": "Disabled", "monitored": false },
+  "AuxAudioDevice4": { "name": "Disabled", "monitored": false },
+  "AuxAudioDevice5": { "name": "Disabled", "monitored": false },
+  "DesktopAudioDevice1": { "name": "Disabled", "monitored": false },
+  "DesktopAudioDevice2": { "name": "Disabled", "monitored": false },
+  "Name": "Vacuum Distillation Channel",
+  "SceneOrder": [
+    { "name": "Live Camera" },
+    { "name": "Loop Video" }
+  ],
+  "TransitionOverrideList": [],
+  "audioInputs": [
+    {
+      "balance": 0.5,
+      "enabled": true,
+      "id": "wasapi_input_capture",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "Microphone",
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {},
+      "sync": 0,
+      "volume": 1.0
+    }
+  ],
+  "currentProgramScene": "Live Camera",
+  "currentTransition": "Fade",
+  "groups": [],
+  "modules": {
+    "auto-scene-switcher": { "active": false, "interval": 300 }
+  },
+  "preview_locked": false,
+  "quick_transitions": [
+    { "duration": 300, "hotkeys": [], "id": 1, "name": "Fade" }
+  ],
+  "saved_projectors": [],
+  "scaling_enabled": false,
+  "scene_order": [
+    { "name": "Live Camera" },
+    { "name": "Loop Video" }
+  ],
+  "sources": [
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "dshow_input",
+      "mixers": 0,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "Camera",
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "video_device_id": "REPLACE_WITH_YOUR_CAMERA_DEVICE_ID"
+      },
+      "sync": 0,
+      "volume": 0.0,
+      "versioned_id": "dshow_input"
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "vlc_source",
+      "mixers": 0,
+      "monitoring_type": 0,
+      "muted": true,
+      "name": "Loop Source",
+      "private_settings": {},
+      "settings": {
+        "loop": true,
+        "network_caching": 400,
+        "playlist": [
+          { "hidden": false, "selected": false, "value": "C:\\path\\to\\loops\\" }
+        ],
+        "shuffle": false,
+        "subtitle_enable": false,
+        "track": 1
+      },
+      "sync": 0,
+      "volume": 1.0
+    },
+    {
+      "balance": 0.5,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "text_gdiplus",
+      "mixers": 0,
+      "monitoring_type": 0,
+      "muted": true,
+      "name": "BRB Overlay",
+      "settings": {
+        "color": 4294967295,
+        "font": { "face": "Space Grotesk", "flags": 0, "size": 48, "style": "Bold" },
+        "text": "Switching Setup — Back Soon",
+        "vertical": false
+      },
+      "sync": 0,
+      "volume": 0.0
+    },
+    {
+      "balance": 0.5,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "text_gdiplus",
+      "mixers": 0,
+      "monitoring_type": 0,
+      "muted": true,
+      "name": "Channel Branding",
+      "settings": {
+        "color": 4288916416,
+        "font": { "face": "Space Grotesk", "flags": 0, "size": 32, "style": "Bold" },
+        "text": "⚗️ The Vacuum Distillation Channel",
+        "vertical": false
+      },
+      "sync": 0,
+      "volume": 0.0
+    }
+  ],
+  "transitions": [
+    {
+      "duration": 300,
+      "hotkeys": {},
+      "id": "fade_transition",
+      "name": "Fade",
+      "settings": { "color": 4278190080 }
+    }
+  ],
+  "virtual-camera": { "internal-source": 0, "output-scene": "" },
+  "scenes": [
+    {
+      "id": "scene",
+      "name": "Live Camera",
+      "settings": {
+        "custom_size": false,
+        "id_counter": 4,
+        "items": [
+          {
+            "align": 5,
+            "bounds": { "type": "OBS_BOUNDS_NONE", "x": 0.0, "y": 0.0 },
+            "crop_bottom": 0, "crop_left": 0, "crop_right": 0, "crop_top": 0,
+            "id": 1,
+            "locked": true,
+            "name": "Camera",
+            "pos": { "x": 0.0, "y": 0.0 },
+            "rot": 0.0,
+            "scale": { "filter": "OBS_SCALE_DISABLE", "x": 1.0, "y": 1.0 },
+            "scale_filter": "OBS_SCALE_DISABLE",
+            "visible": true
+          },
+          {
+            "align": 5,
+            "bounds": { "type": "OBS_BOUNDS_NONE", "x": 0.0, "y": 0.0 },
+            "crop_bottom": 0, "crop_left": 0, "crop_right": 0, "crop_top": 0,
+            "id": 2,
+            "locked": false,
+            "name": "Channel Branding",
+            "pos": { "x": 20.0, "y": 20.0 },
+            "rot": 0.0,
+            "scale": { "filter": "OBS_SCALE_DISABLE", "x": 1.0, "y": 1.0 },
+            "visible": true
+          }
+        ]
+      },
+      "versioned_id": "scene"
+    },
+    {
+      "id": "scene",
+      "name": "Loop Video",
+      "settings": {
+        "custom_size": false,
+        "id_counter": 4,
+        "items": [
+          {
+            "align": 5,
+            "bounds": { "type": "OBS_BOUNDS_STRETCH", "x": 1920.0, "y": 1080.0 },
+            "crop_bottom": 0, "crop_left": 0, "crop_right": 0, "crop_top": 0,
+            "id": 1,
+            "locked": true,
+            "name": "Loop Source",
+            "pos": { "x": 0.0, "y": 0.0 },
+            "rot": 0.0,
+            "scale": { "filter": "OBS_SCALE_DISABLE", "x": 1.0, "y": 1.0 },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "bounds": { "type": "OBS_BOUNDS_NONE", "x": 0.0, "y": 0.0 },
+            "crop_bottom": 0, "crop_left": 0, "crop_right": 0, "crop_top": 0,
+            "id": 2,
+            "locked": false,
+            "name": "BRB Overlay",
+            "pos": { "x": 700.0, "y": 500.0 },
+            "rot": 0.0,
+            "scale": { "filter": "OBS_SCALE_DISABLE", "x": 1.0, "y": 1.0 },
+            "visible": true
+          }
+        ]
+      },
+      "versioned_id": "scene"
+    }
+  ]
+}

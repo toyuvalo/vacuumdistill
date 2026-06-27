@@ -1,0 +1,22 @@
+{
+  "now_distilling": {
+    "name": "Lavender Essential Oil",
+    "started": "2026-06-27",
+    "notes": "Cold-trap at -78°C, ~5 mmHg"
+  },
+  "poll": {
+    "question": "What should we distill next?",
+    "closes": "2026-07-04",
+    "options": [
+      { "label": "Rosemary Essential Oil", "issue": 1, "emoji": "🌿" },
+      { "label": "Peppermint Oil",          "issue": 2, "emoji": "🍃" },
+      { "label": "Eucalyptus Oil",          "issue": 3, "emoji": "🫧" },
+      { "label": "Cedarwood Oil",           "issue": 4, "emoji": "🌲" }
+    ]
+  },
+  "past": [
+    { "name": "Lavender Essential Oil",  "date": "2026-06-20" },
+    { "name": "Anise Oil",               "date": "2026-06-15" },
+    { "name": "Peppermint Concentrate",  "date": "2026-06-08" }
+  ]
+}
